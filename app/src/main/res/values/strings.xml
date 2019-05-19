@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProvingGrounds</string>
+
+    <string name="edit_introduce_hint">Input Introduce</string>
+    <string name="edit_introduce_tip">Introduce: </string>
+    <string name="btn_sure">Sure Update</string>
 </resources>

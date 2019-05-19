@@ -1,0 +1,14 @@
+注意事项：
+1.双向绑定：model必须提供get和set方法，使用系统默认生成的
+public ObservableField<String> getName() {
+    return name;
+}
+public void setName(ObservableField<String> name) {
+    this.name = name;
+}
+不是使用 name.set(name)的形式
+2.BindingAdapter，可以直接使用，但是在xml中不会有类型匹配提示，除非在declare-styleable中定义，注意，format不要
+指定，指定之后，属性的xmlns就要是app了，不是bind，这会和其他的app属性相冲突
+3.缺点：
+  VM，ViewModel的事件触发，有一个不好的点，必须要有一个类似MVP中Presenter的角色来承担，需要优化；
+  Model使用单、双向绑定时，不得不改变类型为ObservableField，这已经改变了model原本想要的属性了。
